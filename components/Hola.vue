@@ -12,18 +12,23 @@ const allCaps = (asdf) => asdf.toUpperCase();
 <template>
   <div>
     <HeadTitle />
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum unde quas
-    quasi repellendus consequatur illo. Maxime est eveniet autem voluptatibus,
-    dicta beatae id optio, laboriosam corrupti nulla, pariatur error fuga!
-    <br />
-    <br />
-    <li v-for="post in posts">{{ post.title }}</li>
+    <p class="fs-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum unde quas
+      quasi repellendus consequatur illo. Maxime est eveniet autem voluptatibus,
+      dicta beatae id optio, laboriosam corrupti nulla, pariatur error fuga!
+    </p>
+
+    <li v-for="post in posts" class="col-12 col-md-9 offset-md-3">
+      {{ post.title }}
+    </li>
   </div>
   <hr />
-  <div>
+  <div class="pb-5">
     <div v-if="pending">Loading......</div>
     <div v-else>
-      <li v-for="comment in comments">{{ allCaps(comment.name) }}</li>
+      <li v-for="comment in comments" class="text-success">
+        {{ allCaps(comment.name) }}
+      </li>
     </div>
   </div>
 </template>
