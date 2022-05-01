@@ -1,0 +1,10 @@
+{
+  "functions": { "source": ".output/server" },
+  "hosting": {
+    "site": "nuxt-3-playground",
+    "public": ".output/public",
+    "cleanUrls": true,
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "function": "server" }]
+  }
+}

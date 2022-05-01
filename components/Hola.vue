@@ -6,7 +6,6 @@ const { data: posts } = await useAsyncData("posts", () =>
 const { pending, data: comments } = useLazyAsyncData("comments", () =>
   $fetch("https://jsonplaceholder.typicode.com/posts/1/comments")
 );
-watch(comments, (newComments) => {});
 
 const allCaps = (asdf) => asdf.toUpperCase();
 </script>
